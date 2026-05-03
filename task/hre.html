@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isange Health Clinic</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #92d050; /* Green background */
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #ffff00; /* Yellow header */
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 2px solid #000;
+        }
+
+        .red-cross {
+            color: red;
+            font-size: 50px;
+            font-weight: bold;
+            margin-right: 20px;
+            line-height: 1;
+        }
+
+        header h1 {
+            margin: 0;
+            flex-grow: 1;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        /* Layout Container */
+        .main-container {
+            display: flex;
+            flex: 1;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        /* Sidebar Navigation */
+        nav {
+            background-color: white;
+            width: 250px;
+            padding: 20px;
+            border: 1px solid #000;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        nav ul li:hover {
+            color: #555;
+        }
+
+        /* Right Content Area */
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Registration Form Area */
+        .registration-box {
+            background-color: #00b0f0; /* Blue area */
+            padding: 30px;
+            border: 1px solid #000;
+            color: black;
+        }
+
+        .registration-box h2 {
+            font-style: italic;
+            background-color: #ffff00;
+            display: inline-block;
+            padding: 5px 10px;
+            margin-top: 0;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .input-group input {
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid black;
+            width: 300px;
+            outline: none;
+            margin-left: 10px;
+        }
+
+        /* Buttons */
+        .btn-group {
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 10px 25px;
+            margin-right: 15px;
+            border: 1px solid #333;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-send { background-color: #92d050; }
+        .btn-save { background-color: #00b050; color: white; }
+        .btn-print { background-color: #ed7d31; color: white; }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        /* Appointment Panel */
+        .appointment-panel {
+            background-color: #5b9bd5; /* Grayish blue */
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #000;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="red-cross">✚</div>
+        <h1>ISANGE HEALTH CLINIC</h1>
+    </header>
+
+    <div class="main-container">
+        <nav>
+            <ul>
+                <li onclick="alert('Going Home')">HOME</li>
+                <li onclick="alert('Opening Appointments')">APPOINTMENT</li>
+                <li onclick="alert('Viewing Patient List')">PATIENT</li>
+                <li onclick="alert('Opening Dashboard')">DASHBOARD</li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <div class="registration-box">
+                <h2>PATIENT REGISTRATION</h2>
+                
+                <div class="input-group">
+                    NAMES: <input type="text" id="p_name">
+                </div>
+                <div class="input-group">
+                    AGE: <input type="text" id="p_age">
+                </div>
+                <div class="input-group">
+                    GENDER: <input type="text" id="p_gender">
+                </div>
+
+                <div class="btn-group">
+                    <button class="btn-send" onclick="submitData()">SEND</button>
+                    <button class="btn-save" onclick="alert('Saved Successfully!')">SAVE</button>
+                    <button class="btn-print" onclick="window.print()">PRINT</button>
+                </div>
+            </div>
+
+            <div class="appointment-panel">
+                APPOINTMENT PANEL<br><br>
+                DATE / TIME / DOCTOR / STATUS
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function submitData() {
+            const name = document.getElementById('p_name').value;
+            if(name === "") {
+                alert("Please enter a name first.");
+            } else {
+                alert("Data sent for patient: " + name);
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+    <meta charset="UTF-8">
+    <title>Appointment Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #5da5da; /* Ibara ry'ubururu rimeze nk'iryo ku gishushanyo */
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Umutwe w'urupapuro */
+        .header {
+            background-color: #27ae60; /* Icyatsi */
+            color: black;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            width: 70%;
+            margin: 0 auto 20px auto;
+            border: 1px solid black;
+        }
+
+        .main-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Sidebar Menu */
+        .sidebar {
+            background-color: white;
+            width: 220px;
+            padding: 20px;
+            border: 1px solid black;
+            min-height: 500px;
+        }
+
+        .menu-link {
+            display: block;
+            text-decoration: none;
+            color: black;
+            padding: 12px;
+            margin: 5px 0;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .menu-link:hover {
+            background-color: #f0f0f0;
+            color: #27ae60;
+        }
+
+        /* Content Area */
+        .content {
+            flex-grow: 1;
+        }
+
+        .top-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        /* Clickable Elements */
+        .date-select {
+            background-color: #f5cba7;
+            padding: 10px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+
+        .new-app-btn {
+            background-color: #9cd66b;
+            padding: 10px 20px;
+            border: 1px solid black;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        /* Imbonerahamwe (Table) */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #cccccc; /* Ibara rya gray */
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #888;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .action-link {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Summary Box */
+        .summary-box {
+            background-color: #bcd9ea;
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #27ae60;
+            margin-bottom: 20px;
+        }
+
+        /* Offline Bar */
+        .offline-bar {
+            background-color: #7f8c8d;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">APPOINTMENT MANAGEMENT</div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <h3>Menu</h3>
+            <a href="iu.html" class="menu-link">Dashboard</a>
+            <a href="evy.html" class="menu-link">Patient</a>
+            <a href="del.html" class="menu-link">Appointment</a>
+            <a href="de.html" class="menu-link">Report</a>
+            <a href="ju.html" class="menu-link">Setting</a>
+        </div>
+
+        <div class="content">
+            <div class="top-row">
+                <div class="date-select">Select date: 28/04/2026</div>
+                <a href="#" class="new-app-btn">New appointment</a>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Patient</th>
+                        <th>Doctor</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>09:00</td>
+                        <td>kalisa</td>
+                        <td>dr.brice</td>
+                        <td>pending</td>
+                        <td><a href="#" class="action-link">edit</a></td>
+                    </tr>
+                    <tr>
+                        <td>10:00</td>
+                        <td>ejide</td>
+                        <td>Dr.muny</td>
+                        <td>Done</td>
+                        <td><a href="#" class="action-link" style="color: black;">View</a></td>
+                    </tr>
+                    <tr>
+                        <td>11:00</td>
+                        <td>bruce</td>
+                        <td>Dr.victor</td>
+                        <td>pending</td>
+                        <td><a href="#" class="action-link">edit</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="summary-box">
+                <h3 style="margin-top: 0;">Today's summary</h3>
+                <p>Total: 13</p>
+                <p>Pending: 2</p>
+                <p>Done: 5</p>
+            </div>
+
+            <div class="offline-bar">
+                Offline Mode Active
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

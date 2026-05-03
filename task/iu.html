@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isange Health Clinic - Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a242f;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        /* Header */
+        .header {
+            background-color: #e67e22;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 20px;
+            border: 2px solid #000;
+            text-transform: uppercase;
+        }
+
+        .main-layout {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Sidebar Menu */
+        .sidebar {
+            background-color: white;
+            width: 220px;
+            padding: 15px;
+            border: 2px solid #27ae60;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar h2 { font-size: 20px; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
+
+        /* Style ya Menu items */
+        .menu-item {
+            text-decoration: none;
+            color: #333;
+            padding: 12px;
+            margin: 5px 0;
+            transition: 0.3s;
+            border-radius: 4px;
+        }
+
+        .menu-item:hover {
+            background-color: #f0f0f0;
+            padding-left: 20px;
+            color: #27ae60;
+        }
+
+        /* Right Content Area */
+        .content {
+            flex-grow: 1;
+        }
+
+        /* Stats Buttons */
+        .stats-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            border: 1px solid #000;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+
+        .stat-card:active { transform: scale(0.98); }
+        .stat-card:hover { opacity: 0.9; }
+
+        .green { background-color: #9cd66b; }
+        .peach { background-color: #f5cba7; }
+        .yellow { background-color: #f9e79f; }
+
+        /* Recent Patients Section */
+        .recent-box {
+            background-color: #7f8c8d;
+            padding: 20px;
+            min-height: 180px;
+            margin-bottom: 20px;
+        }
+
+        /* Bottom Registration Button */
+        .reg-btn {
+            display: block;
+            background-color: #f5cba7;
+            padding: 15px;
+            text-align: center;
+            font-size: 20px;
+            border: 1px solid black;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .reg-btn:hover {
+            background-color: #e5ba96;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">ISANGE HEALTH CLINIC</div>
+
+    <div class="main-layout">
+        <nav class="sidebar">
+            <h2>Menu</h2>
+            <a href="iu.html" class="menu-item">Dashboard</a>
+            <a href="evy.html" class="menu-item">Patient</a>
+            <a href="del.html" class="menu-item">Appointment</a>
+            <a href="de.html" class="menu-item">Report</a>
+            <a href="ju.html" class="menu-item">Setting</a>
+        </nav>
+
+        <div class="content">
+            <div class="stats-row">
+                <a href="#" class="stat-card green">
+                    To day patient<br><strong style="font-size: 22px;">3</strong>
+                </a>
+                <a href="#" class="stat-card peach">
+                    Appointment<br><strong style="font-size: 22px;">6</strong>
+                </a>
+                <a href="#" class="stat-card yellow">
+                    Pending<br><strong style="font-size: 22px;">4</strong>
+                </a>
+            </div>
+
+            <div class="recent-box">
+                <h3 style="margin-top: 0;">Recent patients</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li>- claire uzamukunda</li>
+                    <li>- ange uwase</li>
+                    <li>- umutesi kevine</li>
+                </ul>
+            </div>
+
+            <a href="#" class="reg-btn">
+                Patient registration on paper
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

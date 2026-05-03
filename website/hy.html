@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Converter</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav>
+    <div class="logo">XE Clone</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="converter.html">Converter</a></li>
+        <li><a href="details.html">Details</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="settings.html">Settings</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <h2>Currency Converter</h2>
+
+    <input type="number" id="amount" placeholder="Amount">
+
+    <select id="from">
+        <option>USD</option>
+        <option>EUR</option>
+        <option>RWF</option>
+    </select>
+
+    <button onclick="swapCurrency()">↔</button>
+
+    <select id="to">
+        <option>EUR</option>
+        <option>USD</option>
+        <option>RWF</option>
+    </select>
+
+    <button onclick="convertCurrency()">Convert</button>
+
+    <div id="result"></div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

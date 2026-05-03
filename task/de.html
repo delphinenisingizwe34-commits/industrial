@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+    <meta charset="UTF-8">
+    <title>Report & Statistics - Interactive</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f38630;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            background-color: #ffff00;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            width: 60%;
+            border: 2px solid black;
+            margin-bottom: 20px;
+        }
+
+        .main-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: white;
+            width: 220px;
+            padding: 15px;
+            border: 1px solid black;
+            min-height: 550px;
+        }
+
+        .menu-link {
+            display: block;
+            text-decoration: none;
+            color: black;
+            padding: 12px;
+            margin: 5px 0;
+            transition: 0.3s;
+            font-size: 18px;
+        }
+
+        .menu-link:hover {
+            background-color: #f0f0f0;
+            padding-left: 20px;
+            color: #f38630;
+        }
+
+        /* Content Area */
+        .content { flex-grow: 1; }
+
+        /* Buttons Style */
+        .btn {
+            background-color: #5da5da;
+            color: black;
+            padding: 10px 20px;
+            border: 1px solid black;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.2s;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #4a8dbd;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .btn:active { transform: translateY(2px); }
+
+        .filter-row { display: flex; gap: 15px; margin-bottom: 20px; }
+
+        /* Stats Cards */
+        .stats-row { display: flex; gap: 15px; margin-bottom: 20px; }
+        .stat-card {
+            background-color: #5da5da;
+            flex: 1;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid black;
+        }
+
+        /* Monthly Activity Chart (CSS Bars) */
+        .chart-container {
+            background-color: #5da5da;
+            border: 1px solid black;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .chart-title { font-weight: bold; margin-bottom: 15px; }
+
+        .chart-bars {
+            display: flex;
+            align-items: flex-end;
+            gap: 15px;
+            height: 120px; /* Uburebure bwa chart */
+            padding-bottom: 5px;
+            border-bottom: 2px solid black;
+        }
+
+        .bar {
+            background-color: #777;
+            width: 30px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .bar:hover { background-color: #444; }
+
+        /* Bottom Print Button */
+        .print-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #5da5da;
+            text-align: center;
+            font-weight: bold;
+            border: 1px solid black;
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">Report&statistics</div>
+
+    <div class="main-container">
+        <nav class="sidebar">
+            <h3 style="margin-left: 12px;">Menu</h3>
+            <a href="iu.html" class="menu-link">Dashboard</a>
+            <a href="evy.html" class="menu-link">Patient</a>
+            <a href="del.html" class="menu-link">Appointment</a>
+            <a href="de.html" class="menu-link">Report</a>
+            <a href="ju.html" class="menu-link">Setting</a>
+        </nav>
+
+        <div class="content">
+            <div class="filter-row">
+                <a href="#" class="btn">From Date</a>
+                <a href="#" class="btn">To Date</a>
+                <a href="#" class="btn" style="background-color: #eee;">Generate</a>
+            </div>
+
+            <div class="stats-row">
+                <div class="stat-card">Total Patient<br><strong>109</strong></div>
+                <div class="stat-card">Appointments<br><strong>78</strong></div>
+                <div class="stat-card">Pending<br><strong>32</strong></div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-title">MONTHLY ACTIVITY CHART</div>
+                <div class="chart-bars">
+                    <div class="bar" style="height: 40%;"></div>
+                    <div class="bar" style="height: 60%;"></div>
+                    <div class="bar" style="height: 85%;"></div>
+                    <div class="bar" style="height: 50%;"></div>
+                    <div class="bar" style="height: 100%;"></div>
+                    <div class="bar" style="height: 70%;"></div>
+                </div>
+            </div>
+
+            <a href="#" class="print-btn">
+                REPORTS & READY FOR PRINT/EXPORT
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

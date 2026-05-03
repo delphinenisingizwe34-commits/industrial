@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9cb9c; /* Ibara rya orange ryerurutse */
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Umutwe w'urupapuro */
+        .header {
+            background-color: #6aa84f; /* Icyatsi */
+            color: black;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            width: 70%;
+            margin: 0 auto 20px auto;
+            border: 1px solid #333;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Menu yo ku ruhande */
+        .sidebar {
+            background-color: white;
+            width: 200px;
+            padding: 20px;
+            border: 1px solid #6aa84f;
+            min-height: 400px;
+        }
+
+        .sidebar h3 { margin-top: 0; }
+        .sidebar a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            padding: 10px 0;
+        }
+
+        .sidebar a:hover { color: #6aa84f; }
+
+        /* Igice cy'iburyo */
+        .main-content {
+            flex-grow: 1;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .search-input {
+            padding: 8px;
+            width: 300px;
+            border: 1px solid #ccc;
+        }
+
+        .add-btn {
+            background-color: white;
+            padding: 8px 15px;
+            border: 1px solid black;
+            cursor: pointer;
+            text-decoration: none;
+            color: black;
+        }
+
+        /* Imbonerahamwe (Table) */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .view-link {
+            color: blue;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">PATIENT MANAGEMENT</div>
+
+    <div class="container">
+        <div class="sidebar">
+            <h3>Menu</h3>
+            <a href="iu.html">Dashboard</a>
+            <a href="evy.html">Patient</a>
+            <a href="del.html">Appointment</a>
+            <a href="de.html">Report</a>
+            <a href="ju.html">Setting</a>
+        </div>
+
+        <div class="main-content">
+            <div class="top-bar">
+                <input type="text" class="search-input" placeholder="Search...">
+                <a href="#" class="add-btn">Add patient</a>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>GENDER</th>
+                        <th>PHONE</th>
+                        <th>ACTION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01</td>
+                        <td>UWERA DIVINE</td>
+                        <td>FEMALE</td>
+                        <td>0786905438</td>
+                        <td><a href="#" class="view-link">View</a></td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td>UWASE ROSINE</td>
+                        <td>FEMALE</td>
+                        <td>0794128883</td>
+                        <td><a href="#" class="view-link">View</a></td>
+                    </tr>
+                    <tr>
+                        <td>03</td>
+                        <td>GANZA BRICE</td>
+                        <td>MALE</td>
+                        <td>0724578906</td>
+                        <td><a href="#" class="view-link">View</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

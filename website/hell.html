@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ISANGE HEALTH CLINIC</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: hsl(123, 71%, 43%);
+        }
+
+        header {
+            background: #cdf00a;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background: lightblue;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav button {
+            padding: 8px 12px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .sidebar {
+            width: 220px;
+            height: 100vh;
+            background: #ddd;
+            float: left;
+            padding: 15px;
+        }
+
+        .sidebar button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+
+        .main {
+            margin-left: 240px;
+            padding: 20px;
+        }
+
+        input {
+            width: 300px;
+            padding: 8px;
+            margin: 5px;
+        }
+
+        .action button {
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>ISANGE HEALTH CLINIC</h2>
+</header>
+
+<nav>
+    <button onclick="showMessage('Ahabanza')">Ahabanza</button>
+    <button onclick="showMessage('Kwandika')">Kwandika</button>
+    <button onclick="showMessage('Gahunda')">Gahunda</button>
+    <button onclick="showMessage('Raporo')">Raporo</button>
+    <button onclick="showMessage('Settings')">Settings</button>
+    <button onclick="showMessage('Logout')">Logout</button>
+</nav>
+
+<div class="sidebar">
+    <h3>SIDEBAR MENU</h3>
+    <button onclick="showMessage('Dashboard')">Dashboard</button>
+    <button onclick="showMessage('Register Patient')">Register Patient</button>
+    <button onclick="showMessage('Appointments')">Appointments</button>
+    <button onclick="showMessage('Reports')">Reports</button>
+    <button onclick="showMessage('Settings')">Settings</button>
+    <button onclick="showMessage('Logout')">Logout</button>
+</div>
+
+<div class="main">
+    <h2>PATIENT CHECK-IN SYSTEM</h2>
+
+    Izina ry'umurwayi:<br>
+    <input type="text" id="name"><br>
+
+    Telefoni:<br>
+    <input type="text" id="phone"><br>
+
+    Itariki:<br>
+    <input type="date" id="date"><br>
+
+    Ubwoko bw'umurwayi:
+    <input type="checkbox"> Mushya
+    <input type="checkbox"> Usanzwe
+    <br><br>
+
+    Muganga:<br>
+    <input type="text" id="doctor"><br>
+
+    Icyitonderwa:<br>
+    <input type="text" id="note"><br>
+
+    <div class="action">
+        <button onclick="checkIn()">CHECK IN</button>
+        <button onclick="saveData()">SAVE</button>
+        <button onclick="resetForm()">RESET</button>
+    </div>
+
+    <p id="result"></p>
+
+    <h3>RECENT PATIENTS</h3>
+
+    <table>
+        <tr>
+            <th>Izina</th>
+            <th>Igihe</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>Jean Uwimana</td>
+            <td>08:00 AM</td>
+            <td>Checked In</td>
+        </tr>
+        <tr>
+            <td>Marie Uwera</td>
+            <td>08:30 AM</td>
+            <td>Waiting</td>
+        </tr>
+        <tr>
+            <td>Eric Habimana</td>
+            <td>09:00 AM</td>
+            <td>Completed</td>
+        </tr>
+    </table>
+</div>
+
+<script>
+function showMessage(page) {
+    alert("Wafunguye: " + page);
+}
+
+function checkIn() {
+    let name = document.getElementById("name").value;
+    document.getElementById("result").innerHTML =
+        name + " yakiriwe neza.";
+}
+
+function saveData() {
+    alert("Amakuru yabitswe neza.");
+}
+
+function resetForm() {
+    document.getElementById("name").value = "";
+    document.getElementById("phone").value = "";
+    document.getElementById("date").value = "";
+    document.getElementById("doctor").value = "";
+    document.getElementById("note").value = "";
+    document.getElementById("result").innerHTML = "";
+}
+</script>
+
+</body>
+</html>
