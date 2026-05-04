@@ -1,4 +1,4 @@
-NAMES: NISINGIZWE Delphine
+NAMES: NISINGIZWE Delphine  and
        UWAMAHORO Vestine
 
 
